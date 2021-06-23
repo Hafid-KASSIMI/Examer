@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="12.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="examer.bones.candidate.CandidateInfosRowController">
+   <children>
+      <Label fx:id="codeLbl" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="96.0" styleClass="p14" text="XXXXXX" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS" />
+      <HBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="96.0">
+         <children>
+            <ToggleButton fx:id="maleTB" mnemonicParsing="false" text="">
+               <styleClass>
+                  <String fx:value="icm-tg-btn" />
+                  <String fx:value="icm" />
+               </styleClass>
+               <toggleGroup>
+                  <ToggleGroup fx:id="genderTG" />
+               </toggleGroup>
+               <tooltip>
+                  <Tooltip text="%MALE" />
+               </tooltip>
+            </ToggleButton>
+            <ToggleButton fx:id="femaleTB" mnemonicParsing="false" selected="true" text="" toggleGroup="$genderTG">
+               <styleClass>
+                  <String fx:value="icm-tg-btn" />
+                  <String fx:value="icm" />
+               </styleClass>
+               <tooltip>
+                  <Tooltip text="%FEMALE" />
+               </tooltip>
+            </ToggleButton>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0">
+         <children>
+            <ToggleButton fx:id="undefinedTB" mnemonicParsing="false" selected="true" text="#">
+               <styleClass>
+                  <String fx:value="icm-tg-btn" />
+                  <String fx:value="icm" />
+               </styleClass>
+               <toggleGroup>
+                  <ToggleGroup fx:id="languageTG" />
+               </toggleGroup>
+               <tooltip>
+                  <Tooltip text="%UNDEFINED_LANGUAGE" />
+               </tooltip>
+            </ToggleButton>
+            <ToggleButton fx:id="englishTB" mnemonicParsing="false" text="EN" toggleGroup="$languageTG">
+               <styleClass>
+                  <String fx:value="icm-tg-btn" />
+                  <String fx:value="icm" />
+               </styleClass>
+               <tooltip>
+                  <Tooltip text="%ENGLISH" />
+               </tooltip>
+            </ToggleButton>
+            <ToggleButton fx:id="spanishTB" layoutX="86.0" layoutY="10.0" mnemonicParsing="false" text="CA" toggleGroup="$languageTG">
+               <styleClass>
+                  <String fx:value="icm-tg-btn" />
+                  <String fx:value="icm" />
+               </styleClass>
+               <tooltip>
+                  <Tooltip text="%SPANISH" />
+               </tooltip>
+            </ToggleButton>
+            <ToggleButton fx:id="italianTB" layoutX="110.0" layoutY="10.0" mnemonicParsing="false" text="IT" toggleGroup="$languageTG">
+               <styleClass>
+                  <String fx:value="icm-tg-btn" />
+                  <String fx:value="icm" />
+               </styleClass>
+               <tooltip>
+                  <Tooltip text="%ITALIAN" />
+               </tooltip>
+            </ToggleButton>
+            <ToggleButton fx:id="germanTB" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" text="DE" toggleGroup="$languageTG">
+               <styleClass>
+                  <String fx:value="icm-tg-btn" />
+                  <String fx:value="icm" />
+               </styleClass>
+               <tooltip>
+                  <Tooltip text="%GERMAN" />
+               </tooltip>
+            </ToggleButton>
+         </children>
+      </HBox>
+      <Button fx:id="deleteBtn" alignment="CENTER" disable="false" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefWidth="36.0" styleClass="icm" text="">
+         <tooltip>
+            <Tooltip text="%DELETE" />
+         </tooltip>
+      </Button>
+   </children>
+</HBox>

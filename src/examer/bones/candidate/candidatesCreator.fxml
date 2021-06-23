@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="6.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="examer.bones.candidate.CandidatesCreatorController">
+   <children>
+      <Label maxHeight="1.7976931348623157E308" text="%GENERATE_CANDIDATES_PER_ROOM_SC">
+         <styleClass>
+            <String fx:value="body-title" />
+            <String fx:value="bottom-half-bar" />
+         </styleClass>
+      </Label>
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="460.0" spacing="6.0">
+         <children>
+            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="%BRANCH_SC" />
+            <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="3.0">
+               <children>
+                  <ComboBox fx:id="branchesCMB" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="refreshBranchesBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" prefWidth="36.0" styleClass="icm" text="">
+                     <tooltip>
+                        <Tooltip text="%REFRESH" />
+                     </tooltip>
+                  </Button>
+               </children></HBox>
+            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="%ROOM_SC">
+               <VBox.margin>
+                  <Insets top="6.0" />
+               </VBox.margin>
+            </Label>
+            <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="3.0">
+               <children>
+                  <ComboBox fx:id="roomsCMB" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="refreshRoomsBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" prefWidth="36.0" styleClass="icm" text="">
+                     <tooltip>
+                        <Tooltip text="%REFRESH" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="deleteBtn" layoutX="204.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" prefWidth="36.0" styleClass="icm" text="">
+                     <tooltip>
+                        <Tooltip text="%DELETE" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="cleanBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" prefWidth="36.0" styleClass="icm" text="">
+                     <tooltip>
+                        <Tooltip text="%CLEAN" />
+                     </tooltip>
+                  </Button>
+               </children>
+            </HBox>
+            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="%STARTING_CODE_SC">
+               <VBox.margin>
+                  <Insets top="6.0" />
+               </VBox.margin>
+            </Label>
+            <Spinner fx:id="firstCodeSp" editable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="infos-tf" />
+            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="%ENDING_CODE_SC">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <Spinner fx:id="lastCodeSp" editable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="infos-tf" />
+            <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+               <children>
+                  <Button fx:id="generateBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="btn" text="%GENERATE" textAlignment="CENTER" />
+               </children>
+               <VBox.margin>
+                  <Insets top="6.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="12.0" />
+         </padding>
+      </VBox>
+      <VBox fx:id="candsInfosVB" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="12.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Label maxHeight="1.7976931348623157E308" text="%CHECK_GENDERS_AND_SECOND_FOREIGN_LANGUAGES_SC">
+               <styleClass>
+                  <String fx:value="body-title" />
+                  <String fx:value="bottom-half-bar" />
+               </styleClass>
+               <VBox.margin>
+                  <Insets top="12.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label text="%GENERALIZE_GENDER_SC">
+                     <HBox.margin>
+                        <Insets right="6.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ToggleButton fx:id="maleTB" mnemonicParsing="false" text="">
+                     <styleClass>
+                        <String fx:value="icm-tg-btn" />
+                        <String fx:value="icm" />
+                     </styleClass>
+                     <tooltip>
+                        <Tooltip text="%MALE" />
+                     </tooltip>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="genderTG" />
+                     </toggleGroup>
+                  </ToggleButton>
+                  <ToggleButton fx:id="femaleTB" mnemonicParsing="false" text="" toggleGroup="$genderTG">
+                     <styleClass>
+                        <String fx:value="icm-tg-btn" />
+                        <String fx:value="icm" />
+                     </styleClass>
+                     <tooltip>
+                        <Tooltip text="%FEMALE" />
+                     </tooltip>
+                  </ToggleButton>
+               </children>
+               <padding>
+                  <Insets left="12.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="45.0">
+               <children>
+                  <Label text="%GENERALIZE_LANGUAGE_SC">
+                     <HBox.margin>
+                        <Insets right="6.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ToggleButton fx:id="undefinedTB" mnemonicParsing="false" text="#">
+                     <styleClass>
+                        <String fx:value="icm-tg-btn" />
+                        <String fx:value="icm" />
+                     </styleClass>
+                     <tooltip>
+                        <Tooltip text="%UNDEFINED_LANGUAGE" />
+                     </tooltip>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="languageTG" />
+                     </toggleGroup>
+                  </ToggleButton>
+                  <ToggleButton fx:id="englishTB" mnemonicParsing="false" text="EN" toggleGroup="$languageTG">
+                     <styleClass>
+                        <String fx:value="icm-tg-btn" />
+                        <String fx:value="icm" />
+                     </styleClass>
+                     <tooltip>
+                        <Tooltip text="%ENGLISH" />
+                     </tooltip>
+                  </ToggleButton>
+                  <ToggleButton fx:id="spanishTB" mnemonicParsing="false" text="CA" toggleGroup="$languageTG">
+                     <styleClass>
+                        <String fx:value="icm-tg-btn" />
+                        <String fx:value="icm" />
+                     </styleClass>
+                     <tooltip>
+                        <Tooltip text="%SPANISH" />
+                     </tooltip>
+                  </ToggleButton>
+                  <ToggleButton fx:id="italianTB" mnemonicParsing="false" text="IT" toggleGroup="$languageTG">
+                     <styleClass>
+                        <String fx:value="icm-tg-btn" />
+                        <String fx:value="icm" />
+                     </styleClass>
+                     <tooltip>
+                        <Tooltip text="%ITALIAN" />
+                     </tooltip>
+                  </ToggleButton>
+                  <ToggleButton fx:id="germanTB" mnemonicParsing="false" text="DE" toggleGroup="$languageTG">
+                     <styleClass>
+                        <String fx:value="icm-tg-btn" />
+                        <String fx:value="icm" />
+                     </styleClass>
+                     <tooltip>
+                        <Tooltip text="%GERMAN" />
+                     </tooltip>
+                  </ToggleButton>
+               </children>
+               <padding>
+                  <Insets left="12.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="12.0">
+               <children>
+                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="96.0" styleClass="bottom-half-bar" text="%EXAM_CODE" textAlignment="CENTER" />
+                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="96.0" styleClass="bottom-half-bar" text="%GENDER" textAlignment="CENTER" />
+                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0" styleClass="bottom-half-bar" text="%SECOND_FOREIGN_LANGUAGE" textAlignment="CENTER" />
+               </children>
+               <padding>
+                  <Insets left="12.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <VBox fx:id="candsListVB" spacing="6.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="12.0" />
+               </padding></VBox>
+            <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+               <children>
+                  <Button fx:id="saveBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="btn" text="%SAVE" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="12.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="12.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="examer.bones.plan.PlanController">
+   <children>
+      <Label maxHeight="1.7976931348623157E308" text="%DO_PLAN_SC">
+         <styleClass>
+            <String fx:value="body-title" />
+            <String fx:value="bottom-half-bar" />
+         </styleClass></Label>
+      <GridPane hgap="3.0" vgap="12.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" />
+          <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+            <ColumnConstraints maxWidth="1.7976931348623157E308" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="1.7976931348623157E308" />
+          <RowConstraints maxHeight="1.7976931348623157E308" />
+            <RowConstraints maxHeight="1.7976931348623157E308" />
+            <RowConstraints maxHeight="1.7976931348623157E308" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="%BRANCH_SC" />
+            <ComboBox fx:id="branchesCMB" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="120.0" prefWidth="240.0" GridPane.columnIndex="1" />
+            <Button fx:id="refreshBranchesBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" prefWidth="36.0" styleClass="icm" text="" GridPane.columnIndex="2">
+                      <tooltip>
+                  <Tooltip text="%REFRESH" />
+               </tooltip></Button>
+            <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="%MATTER_SC" GridPane.rowIndex="1" />
+            <ComboBox fx:id="mattersCMB" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="120.0" prefWidth="240.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="refreshMattersBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" prefWidth="36.0" styleClass="icm" text="" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                      <tooltip>
+                  <Tooltip text="%REFRESH" />
+               </tooltip></Button>
+            <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="%PLAN_SC" GridPane.rowIndex="2" />
+            <ComboBox fx:id="plansCMB" layoutX="57.0" layoutY="13.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="120.0" prefWidth="240.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="refreshPlansBtn" layoutX="227.0" layoutY="13.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" prefWidth="36.0" styleClass="icm" text="" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                      <tooltip>
+                  <Tooltip text="%REFRESH" />
+               </tooltip></Button>
+            <Label alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="%DATE" GridPane.rowIndex="3" />
+            <DatePicker fx:id="dateDP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="infos-tf" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <HBox fx:id="btnsHB" alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="3.0">
+         <children>
+            <Button fx:id="planBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="btn" text="%DO_PLAN" />
+            <Button fx:id="updateBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="btn" text="%UPDATE" />
+            <Button fx:id="cancelBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="btn" text="%CANCEL" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
