@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="1.7976931348623157E308" maxWidth="440.0" spacing="12.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="examer.skeleton.CentersController">
+   <children>
+      <Label text="%CHOOSE_AN_EXAM_CENTER">
+         <styleClass>
+            <String fx:value="body-title" />
+            <String fx:value="bottom-half-bar" />
+         </styleClass>
+      </Label>
+      <Label layoutX="10.0" layoutY="171.0" text="%CENTERS_LIST_SC" />
+      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="3.0">
+         <children>
+            <ComboBox fx:id="centersCMB" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+            <Button fx:id="refreshBtn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" prefWidth="36.0" styleClass="icm" text="">
+               <tooltip>
+                  <Tooltip text="%REFRESH" />
+               </tooltip>
+            </Button>
+            <Button fx:id="updateBtn" alignment="CENTER" disable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" prefWidth="36.0" styleClass="icm" text="">
+               <tooltip>
+                  <Tooltip text="%UPDATE" />
+               </tooltip>
+            </Button>
+            <Button fx:id="deleteBtn" alignment="CENTER" disable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" prefWidth="36.0" styleClass="icm" text="">
+               <tooltip>
+                  <Tooltip text="%DELETE" />
+               </tooltip>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" spacing="3.0">
+         <children>
+            <Button fx:id="chooseBtn" alignment="CENTER" disable="false" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="btn" text="%CHOOSE" />
+         </children>
+      </HBox>
+      <Label text="%OR_CREATE_ANOTHER_CENTER">
+         <VBox.margin>
+            <Insets top="12.0" />
+         </VBox.margin>
+         <styleClass>
+            <String fx:value="body-title" />
+            <String fx:value="bottom-half-bar" />
+         </styleClass>
+      </Label>
+      <Label text="%ACADEMY_SC" />
+      <ComboBox fx:id="acadsCMB" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="%ACADEMIES_LIST" />
+      <Label text="%DIRECTION_SC" />
+      <TextField fx:id="directionTF" maxWidth="1.7976931348623157E308" promptText="%TAPE_DIRECTION_NAME" styleClass="infos-tf" />
+      <Label text="%CENTER_NAME" />
+      <TextField fx:id="nameTF" maxWidth="1.7976931348623157E308" promptText="%TAPE_CENTER_NAME" styleClass="infos-tf" />
+      <FlowPane alignment="CENTER_RIGHT" columnHalignment="RIGHT" hgap="3.0">
+         <children>
+            <Button fx:id="createBtn" alignment="CENTER" disable="false" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="btn" text="%CREATE" />
+            <Button fx:id="doUpdateBtn" alignment="CENTER" disable="false" layoutX="359.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="btn" text="%SAVE" />
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </FlowPane>
+   </children>
+   <padding>
+      <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+   </padding>
+</VBox>

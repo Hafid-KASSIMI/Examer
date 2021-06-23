@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" stylesheets="@../resources/styles/theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="examer.skeleton.MainController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+         <menus>
+            <Menu mnemonicParsing="false" text="%APPLICATION">
+               <items>
+                  <MenuItem fx:id="quitMI" mnemonicParsing="false" text="%QUIT" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="%COMMANDS">
+               <items>
+                  <MenuItem fx:id="refreshMI" mnemonicParsing="false" text="%REFRESH" />
+                  <MenuItem fx:id="chooseExamMI" mnemonicParsing="false" text="%CHOOSE_ANOTHER_EXAM" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="%QUESTION_MARK">
+               <items>
+                  <MenuItem fx:id="aboutMI" mnemonicParsing="false" text="%ABOUT" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </top>
+   <right>
+      <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="300.0" BorderPane.alignment="CENTER">
+        <content>
+            <fx:include source="sidebar.fxml" />
+        </content>
+      </ScrollPane>
+   </right>
+   <center>
+      <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+         <children>
+            <fx:include fx:id="ribbonHB" source="ribbonBar/ribbon.fxml" />
+            <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+               <content>
+                  <StackPane fx:id="bodySP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                     </StackPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER_RIGHT" styleClass="status-bar" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="todayLbl" layoutX="16.0" layoutY="13.0" text="Label">
+               <HBox.margin>
+                  <Insets left="6.0" right="6.0" />
+               </HBox.margin>
+            </Label>
+            <Label text="|" />
+            <Label fx:id="currentTimeLbl" text="Label">
+               <HBox.margin>
+                  <Insets left="6.0" right="6.0" />
+               </HBox.margin>
+            </Label>
+            <Label maxWidth="1.7976931348623157E308" text="Spacer" visible="false" HBox.hgrow="ALWAYS" />
+            <ToggleButton fx:id="startSlideShowTB" mnemonicParsing="false" text="" visible="false">
+               <styleClass>
+                  <String fx:value="icm" />
+                  <String fx:value="labeled-btn" />
+               </styleClass>
+            </ToggleButton>
+            <Button fx:id="refreshBtn" mnemonicParsing="false" text="">
+               <tooltip>
+                  <Tooltip text="%REFRESH" />
+               </tooltip>
+               <styleClass>
+                  <String fx:value="icm" />
+                  <String fx:value="labeled-btn" />
+               </styleClass>
+            </Button>
+            <Button fx:id="chooseExamBtn" layoutX="1391.0" layoutY="10.0" mnemonicParsing="false" text="">
+               <tooltip>
+                  <Tooltip text="%SELECT_EXAM" />
+               </tooltip>
+               <styleClass>
+                  <String fx:value="icm" />
+                  <String fx:value="labeled-btn" />
+               </styleClass>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

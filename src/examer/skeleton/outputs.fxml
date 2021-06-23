@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="6.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="examer.skeleton.OutputsController">
+   <children>
+      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+         <children>
+            <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+               <children>
+                  <ToggleButton fx:id="branchesTB" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="64.0" selected="true" styleClass="icm-tg-btn" text="%BRANCHES">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="commandsTG" />
+                     </toggleGroup>
+                     <tooltip>
+                        <Tooltip text="%BIG_ENVELOPS" />
+                     </tooltip>
+                  </ToggleButton>
+                  <ToggleButton fx:id="roomsTB" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="64.0" styleClass="icm-tg-btn" text="%ROOMS" toggleGroup="$commandsTG">
+                     <tooltip>
+                        <Tooltip text="%SMALL_ENVELOPS" />
+                     </tooltip>
+                  </ToggleButton>
+                  <ToggleButton fx:id="trialsTB" layoutX="10.0" layoutY="74.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="64.0" styleClass="icm-tg-btn" text="%TRIALS_SHORT" toggleGroup="$commandsTG">
+                     <tooltip>
+                        <Tooltip text="%TRIALS" />
+                     </tooltip>
+                  </ToggleButton>
+               </children>
+            </VBox>
+            <StackPane alignment="TOP_LEFT" maxHeight="1.7976931348623157E308">
+               <children>
+                  <fx:include fx:id="branchesVB" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="440.0" source="../output/branchesOutput.fxml" />
+                  <fx:include fx:id="roomsVB" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="440.0" source="../output/roomsOutput.fxml" />
+                  <fx:include fx:id="trialsVB" maxHeight="1.7976931348623157E308" source="../output/trialOutput.fxml" StackPane.alignment="TOP_LEFT" />
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="12.0" left="24.0" right="24.0" top="12.0" />
+               </padding>
+            </StackPane>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="6.0" left="24.0" right="24.0" top="24.0" />
+   </padding>
+</VBox>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="24.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="examer.skeleton.PlanningController">
+   <children>
+      <fx:include maxHeight="1.7976931348623157E308" maxWidth="-Infinity" prefWidth="460.0" source="../bones/plan/plan.fxml" HBox.hgrow="ALWAYS" />
+      <Separator prefWidth="200.0">
+         <padding>
+            <Insets left="64.0" right="64.0" />
+         </padding></Separator>
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="12.0" VBox.vgrow="ALWAYS">
+         <children>
+            <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="6.0">
+               <children>
+                  <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="%TODAY_PLAN">
+                     <styleClass>
+                        <String fx:value="body-title" />
+                        <String fx:value="bottom-half-bar" />
+                     </styleClass></Label>
+               </children>
+            </HBox>
+            <TableView fx:id="planTV" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+              <columns>
+                <TableColumn fx:id="branchTC" editable="false" maxWidth="1.7976931348623157E308" minWidth="160.0" prefWidth="-1.0" text="%BRANCH" />
+                <TableColumn fx:id="matTC" editable="false" maxWidth="1.7976931348623157E308" minWidth="160.0" prefWidth="-1.0" text="%MATTER" />
+                  <TableColumn fx:id="hourTC" editable="false" maxWidth="1.7976931348623157E308" minWidth="64.0" prefWidth="-1.0" text="%START" />
+                  <TableColumn fx:id="durationTC" editable="false" maxWidth="1.7976931348623157E308" minWidth="64.0" prefWidth="-1.0" text="%DURATION" />
+                  <TableColumn fx:id="endTC" editable="false" maxWidth="1.7976931348623157E308" minWidth="64.0" prefWidth="-1.0" text="%END" />
+                  <TableColumn fx:id="remainingTC" editable="false" maxWidth="1.7976931348623157E308" minWidth="120.0" prefWidth="-1.0" text="%STATUS" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="6.0" left="24.0" right="24.0" top="24.0" />
+   </padding>
+</VBox>

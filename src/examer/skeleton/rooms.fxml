@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="24.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="examer.skeleton.RoomsController">
+   <children>
+      <HBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="24.0">
+         <children>
+            <fx:include fx:id="generatorVB" maxHeight="-Infinity" maxWidth="540.0" source="../bones/room/roomGenerator.fxml" />
+            <Separator maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" orientation="VERTICAL">
+               <padding>
+                  <Insets bottom="24.0" top="24.0" />
+               </padding></Separator>
+            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="12.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="3.0">
+                     <children>
+                        <Label maxHeight="1.7976931348623157E308" text="%STATISTICS_SC">
+                           <styleClass>
+                              <String fx:value="body-title" />
+                              <String fx:value="bottom-half-bar" />
+                           </styleClass></Label>
+                     </children>
+                  </HBox>
+                  <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="6.0">
+                     <children>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="p14" text="%ROOMS_NUMBER_SC" />
+                        <Label fx:id="roomsCountLbl" maxWidth="1.7976931348623157E308" styleClass="p14" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="39.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="6.0">
+                     <children>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="p14" text="%MAX_CANDIDATES_PER_ROOM_SC" />
+                        <Label fx:id="maxCandsLbl" maxWidth="1.7976931348623157E308" styleClass="p14" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="80.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="6.0">
+                     <children>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="p14" text="%MIN_CANDIDATES_PER_ROOM_SC" />
+                        <Label fx:id="minCandsLbl" maxWidth="1.7976931348623157E308" styleClass="p14" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="121.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="6.0">
+                     <children>
+                        <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="p14" text="%AVG_CANDIDATES_PER_ROOM_SC" />
+                        <Label fx:id="avgCandsLbl" maxWidth="1.7976931348623157E308" styleClass="p14" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Separator prefWidth="200.0" />
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="12.0" VBox.vgrow="ALWAYS">
+         <children>
+            <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="6.0">
+               <children>
+                  <Label maxHeight="1.7976931348623157E308" text="%POPULATED_REGISTERED_ROOMS_SC">
+                     <styleClass>
+                        <String fx:value="body-title" />
+                        <String fx:value="bottom-half-bar" />
+                     </styleClass></Label>
+               </children>
+            </HBox>
+            <TableView fx:id="roomsTV" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" VBox.vgrow="ALWAYS">
+              <columns>
+                <TableColumn fx:id="numTC" maxWidth="1.7976931348623157E308" minWidth="60.0" prefWidth="-1.0" text="#" />
+                <TableColumn fx:id="braTC" maxWidth="1.7976931348623157E308" minWidth="160.0" prefWidth="-1.0" text="%BRANCH" />
+                  <TableColumn maxWidth="1.7976931348623157E308" minWidth="60.0" prefWidth="-1.0" text="%CANDIDATES">
+                     <columns>
+                        <TableColumn fx:id="candsNumTC" maxWidth="-1.0" minWidth="60.0" prefWidth="-1.0" text="%TOTAL" />
+                        <TableColumn fx:id="feTC" maxWidth="1.7976931348623157E308" minWidth="60.0" prefWidth="-1.0" text="%FEMALES" />
+                        <TableColumn fx:id="cands1stTC" maxWidth="-1.0" minWidth="60.0" prefWidth="-1.0" text="%FIRST_CODE" />
+                        <TableColumn fx:id="candsLastTC" maxWidth="-1.0" minWidth="60.0" prefWidth="-1.0" text="%LAST_CODE" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn maxWidth="1.7976931348623157E308" minWidth="60.0" prefWidth="-1.0" text="%ABSENTS">
+                     <columns>
+                        <TableColumn fx:id="absTC" maxWidth="1.7976931348623157E308" minWidth="60.0" prefWidth="-1.0" text="%TOTAL" />
+                        <TableColumn fx:id="feAbsTC" maxWidth="1.7976931348623157E308" minWidth="60.0" prefWidth="-1.0" text="%FEMALES" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn maxWidth="1.7976931348623157E308" minWidth="60.0" prefWidth="-1.0" text="%CHEATERS">
+                     <columns>
+                        <TableColumn fx:id="cheaTC" maxWidth="1.7976931348623157E308" minWidth="60.0" prefWidth="-1.0" text="%TOTAL" />
+                        <TableColumn fx:id="feCheaTC" maxWidth="1.7976931348623157E308" minWidth="60.0" prefWidth="-1.0" text="%FEMALES" />
+                     </columns>
+                  </TableColumn>
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="6.0" left="24.0" right="24.0" top="24.0" />
+   </padding>
+</VBox>

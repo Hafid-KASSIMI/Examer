@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="24.0" stylesheets="@../../resources/styles/theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="examer.skeleton.slideshow.Slide1Controller">
+   <children>
+      <Label fx:id="examNameLbl" alignment="CENTER" text="Exam name">
+         <styleClass>
+            <String fx:value="title" />
+            <String fx:value="bottom-bar" />
+         </styleClass>
+         <padding>
+            <Insets bottom="6.0" left="12.0" right="12.0" top="6.0" />
+         </padding>
+         <VBox.margin>
+            <Insets bottom="24.0" />
+         </VBox.margin>
+      </Label>
+      <Label alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" text="%PLANNINGS_AND_TIMINGS">
+         <styleClass>
+            <String fx:value="bottom-half-bar" />
+            <String fx:value="title" />
+         </styleClass>
+      </Label>
+      <TableView fx:id="planTV" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="260.0" VBox.vgrow="ALWAYS">
+         <columns>
+            <TableColumn fx:id="dateTC" editable="false" maxWidth="1.7976931348623157E308" minWidth="120.0" prefWidth="-1.0" text="%DATE" />
+            <TableColumn fx:id="hourTC" editable="false" maxWidth="1.7976931348623157E308" minWidth="96.0" prefWidth="-1.0" text="%START" />
+            <TableColumn fx:id="endTC" editable="false" maxWidth="1.7976931348623157E308" minWidth="96.0" prefWidth="-1.0" text="%END" />
+            <TableColumn fx:id="branchTC" editable="false" maxWidth="1.7976931348623157E308" minWidth="200.0" prefWidth="-1.0" text="%BRANCH" />
+            <TableColumn fx:id="matTC" editable="false" maxWidth="1.7976931348623157E308" minWidth="160.0" prefWidth="-1.0" text="%MATTER" />
+            <TableColumn fx:id="durationTC" editable="false" maxWidth="1.7976931348623157E308" minWidth="96.0" prefWidth="-1.0" text="%DURATION" />
+         </columns>
+      </TableView>
+   </children>
+   <padding>
+      <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+   </padding>
+</VBox>
