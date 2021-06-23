@@ -11,4 +11,4 @@ Java 8
 + **SQLite JDBC library** version: 3.16.1
 + **ICU4J** version: 64.2, Unicode, Inc.
 ## التثبيت
-_**على الويندووز**_: [https://mdrassty.net/examer])
+_**على الويندووز**_: [https://mdrassty.net/examer](https://mdrassty.net/examer)
